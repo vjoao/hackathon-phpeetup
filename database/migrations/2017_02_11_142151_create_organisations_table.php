@@ -21,6 +21,7 @@ class CreateOrganisationsTable extends Migration
             $table->string('phone');
             $table->string('city');
             $table->string('website');
+            $table->string('avatar');
             $table->timestamps();
         });
     }

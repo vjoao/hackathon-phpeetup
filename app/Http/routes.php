@@ -29,6 +29,10 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'home', 'uses' => 'PageController@home'
         ]);
 
+    Route::get('/tasks/{task}', [
+        'as' => 'tasks', 'uses' => 'TaskController@show'
+    ]);
+
     Route::get('/api', [
     'as' => 'api', 'uses' => 'PageController@api'
         ]);
