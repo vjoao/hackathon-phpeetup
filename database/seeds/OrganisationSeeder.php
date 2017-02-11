@@ -18,7 +18,8 @@ class OrganisationSeeder extends Seeder
             'contact_person' => 'Victor Nascimento',
             'phone' => '99228-6335',
             'city' => 'Feira de Santana',
-            'website' => 'http://facebook.com/vmjoao'
+            'website' => 'http://facebook.com/vmjoao',
+            'avatar' => 'https://br.darkmiratour.com/wp-content/uploads/2016/02/PHPBA-150.png'
         ]);
         Organisation::create([
             'name' => 'Minha segunda ONG',
@@ -26,7 +27,8 @@ class OrganisationSeeder extends Seeder
             'contact_person' => 'Victor Nascimento',
             'phone' => '99228-6335',
             'city' => 'Feira de Santana',
-            'website' => 'http://facebook.com/vmjoao'
+            'website' => 'http://facebook.com/vmjoao',
+            'avatar' => 'https://br.darkmiratour.com/wp-content/uploads/2016/02/PHPBA-150.png'
         ]);
         Organisation::create([
             'name' => 'Minha terceira ONG',
@@ -34,7 +36,8 @@ class OrganisationSeeder extends Seeder
             'contact_person' => 'Victor Nascimento',
             'phone' => '99228-6335',
             'city' => 'Feira de Santana',
-            'website' => 'http://facebook.com/vmjoao'
+            'website' => 'http://facebook.com/vmjoao',
+            'avatar' => 'https://br.darkmiratour.com/wp-content/uploads/2016/02/PHPBA-150.png'
         ]);
         Organisation::create([
             'name' => 'Minha quarta ONG',
@@ -42,7 +45,8 @@ class OrganisationSeeder extends Seeder
             'contact_person' => 'Victor Nascimento',
             'phone' => '99228-6335',
             'city' => 'Feira de Santana',
-            'website' => 'http://facebook.com/vmjoao'
+            'website' => 'http://facebook.com/vmjoao',
+            'avatar' => 'https://br.darkmiratour.com/wp-content/uploads/2016/02/PHPBA-150.png'
         ]);
     }
 }

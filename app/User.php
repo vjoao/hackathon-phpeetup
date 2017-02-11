@@ -46,6 +46,11 @@ class User extends Authenticatable
 
     public function tasks()
     {
-        $this->hasMany(Task::class);
+        return $this->hasMany(Task::class);
+    }
+
+    public function organisations()
+    {
+        return $this->hasMany(Organisation::class, 'owner_id');
     }
 }

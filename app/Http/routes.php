@@ -30,7 +30,38 @@ Route::group(['middleware' => ['web']], function () {
         ]);
 
     Route::get('/tasks/{task}', [
-        'as' => 'tasks', 'uses' => 'TaskController@show'
+        'as' => 'task', 'uses' => 'TaskController@show',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/organisations', [
+        'as' => 'organisations', 'uses' => 'OrganisationController@index',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/organisations/new', [
+        'as' => 'newOrganisation', 'uses' => 'OrganisationController@create',
+        'middleware' => ['auth']
+    ]);
+
+    Route::get('/organisations/{organisation}/tasks/new', [
+        'as' => 'newTask', 'uses' => 'OrganisationController@newTask',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/organisations/{organisation}/tasks', [
+        'as' => 'postTask', 'uses' => 'OrganisationController@postTask',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/organisations', [
+        'as' => 'postOrganisation', 'uses' => 'OrganisationController@store',
+        'middleware' => ['auth']
+    ]);
+
+    Route::post('/tasks/{task}/users', [
+        'as' => 'save_task', 'uses' => 'TaskController@addUser',
+        'middleware' => ['auth']
     ]);
 
     Route::get('/api', [

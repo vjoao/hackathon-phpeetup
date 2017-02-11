@@ -39,16 +39,5 @@
         </form>
 
         <hr/>
-        <div class="row">
-            <div class="col col-sm-6">
-                <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-social"><i class="fa fa-facebook"></i>Entrar com o Facebook</a>
-            </div>
-            <div class="col col-sm-6">
-                <a href="{{ url('/auth/google') }}" class="btn btn-block btn-google btn-social"><i class="fa fa-google-plus"></i>Entre com sua conta Google</a>
-            </div>
-        </div>
-
-        
-
     </div>
 @stop

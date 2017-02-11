@@ -26,7 +26,7 @@
                     <td>{{$task->description}}</td>
                     <td>{{$task->organisation->name}}</td>
                     <td>
-                        <a href="/tasks/{{$task->id}}" class="btn btn-primary">Posso Ajudar!</a>
+                    <a href="/tasks/{{$task->id}}" class="btn btn-primary">Posso Ajudar!</a>
                     </td>
                 </tr>
                @endforeach

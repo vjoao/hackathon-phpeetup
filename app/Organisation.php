@@ -20,4 +20,11 @@ class Organisation extends Model
     {
         # code...
     }
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
+
+    
 }

@@ -14,7 +14,7 @@
                 <li class="{{ request()->path() == "/" ? 'active' : 'n' }}"><a href="{{ route('home') }}">Quero ajudar</a></li>
             
             @if(!Auth::guest())
-                <li class="{{ request()->path() == "/organisations" ? 'active' : 'n' }}"><a href="{{ route('organisations') }}">Minhas organizações</a></li>
+                <li class="{{ request()->path() == "organisations" ? 'active' : 'n' }}"><a href="{{ route('organisations') }}">Minhas organizações</a></li>
             @endif
 
             </ul>
