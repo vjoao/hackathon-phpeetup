@@ -9,6 +9,6 @@
     
         public function show($task)
         {
-            return view('tasks')->withTask(Task::find($task));
+            return view('task')->withTask(Task::find($task));
         }
     }
