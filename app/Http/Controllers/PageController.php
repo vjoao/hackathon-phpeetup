@@ -2,6 +2,8 @@
 
     namespace App\Http\Controllers;
 
+    use App\Task;
+
     class PageController extends Controller
     {
         
@@ -11,8 +13,8 @@
          */   
         public function home()
         {
-            return view('welcome');
-
+            $tasks = Task::all();
+            return view('welcome')->withTasks($tasks);
         } 
 
         /**

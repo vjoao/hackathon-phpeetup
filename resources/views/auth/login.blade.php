@@ -6,7 +6,7 @@
         @include('layouts.partials.alerts')
 
         <div class="page-header">
-            <h3>Sign In</h3>
+            <h3>Acesse sua conta</h3>
         </div>
 
          <form role="form" method="POST" action="{{ route('auth.login') }}" class="form-horizontal" _lpchecked="1">
@@ -39,12 +39,16 @@
         </form>
 
         <hr/>
+        <div class="row">
+            <div class="col col-sm-6">
+                <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-social"><i class="fa fa-facebook"></i>Entrar com o Facebook</a>
+            </div>
+            <div class="col col-sm-6">
+                <a href="{{ url('/auth/google') }}" class="btn btn-block btn-google btn-social"><i class="fa fa-google-plus"></i>Entre com sua conta Google</a>
+            </div>
+        </div>
 
-        <a href="{{ url('/auth/facebook') }}" class="btn btn-block btn-facebook btn-social"><i class="fa fa-facebook"></i>Sign in with Facebook</a>
-        <a href="{{ url('/auth/twitter') }}" class="btn btn-block btn-twitter btn-social"><i class="fa fa-twitter"></i>Sign in with Twitter</a>
-        <a href="{{ url('/auth/google') }}" class="btn btn-block btn-google btn-social"><i class="fa fa-google-plus"></i>Sign in with Google</a>
-        <a href="{{ url('/auth/github') }}" class="btn btn-block btn-github btn-social"><i class="fa fa-github"></i>Sign in with GitHub</a>
-        <a href="{{ url('/auth/linkedin') }}" class="btn btn-block btn-linkedin btn-social"><i class="fa fa-linkedin"></i>Sign in with LinkedIn</a>
-        <a href="{{ url('/auth/bitbucket') }}" class="btn btn-block btn-bitbucket btn-social"><i class="fa fa-bitbucket"></i>Sign in with Bitbucket</a>
+        
+
     </div>
 @stop

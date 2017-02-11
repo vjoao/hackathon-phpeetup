@@ -2,30 +2,35 @@
 
 @section('content')
     <div class="main-container">
-         <h1>Hackathon Starter</h1>
-         <p class="lead">A boilerplate for Laravel web applications.</p>
-
+         <h1>PossoAjudar</h1>
+         <p class="lead">A sua forma de encontrar trabalho voluntário e ajudar as organizações da sua cidade.</p>
          <hr>
 
          <div class="row">
-            <div class="col-sm-6">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a href="#" role="button" class="btn btn-default">View details »</a></p>
-            </div>
-            <div class="col-sm-6">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a href="#" role="button" class="btn btn-default">View details »</a></p>
-            </div>
-            <div class="col-sm-6">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a href="#" role="button" class="btn btn-default">View details »</a></p>
-            </div>
-            <div class="col-sm-6">
-                <h2>Heading</h2><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                <p><a href="#" role="button" class="btn btn-default">View details »</a></p>
+            <div class="col-sm-12">
+            <table class="table">
+               <th>
+                Tarefa
+               </th>
+               <th>
+                Descrição
+               </th>
+               <th>
+                Organização
+               </th>
+               <th style="width: 64px;">
+               </th>
+               @foreach($tasks as $task)
+                <tr>
+                    <td>{{$task->name}}</td>
+                    <td>{{$task->description}}</td>
+                    <td>{{$task->organisation->name}}</td>
+                    <td>
+                        <a href="/tasks/{{$task->id}}" class="btn btn-primary">Posso Ajudar!</a>
+                    </td>
+                </tr>
+               @endforeach
+            </table>
             </div>
         </div>
     </div>

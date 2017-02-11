@@ -43,4 +43,9 @@ class User extends Authenticatable
     {
         return $this->oauth_token_secret;
     }
+
+    public function tasks()
+    {
+        $this->hasMany(Task::class);
+    }
 }
