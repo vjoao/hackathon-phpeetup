@@ -18,7 +18,7 @@ class Organisation extends Model
 
     public function tasks()
     {
-        # code...
+        return $this->hasMany(Task::class);
     }
 
     public function owner()

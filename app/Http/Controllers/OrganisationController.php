@@ -34,12 +34,17 @@
             return view('newTask')->withOrganisation($organisation);
         }
 
+        public function viewTask ($organisation, $task) {
+            $task = Task::find($task);
+            return view('organisationTask')->withTask($task)->withUsers($task->users);
+        }
+
         public function postTask(Request $request, $organisation)
         {
 
 
             $organisation = Organisation::find($organisation);
-            
+
             if($organisation->owner_id === Auth::user()->id) {
                 $task = new Task;
                 $task->fill($request->all());

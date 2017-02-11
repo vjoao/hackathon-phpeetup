@@ -20,7 +20,17 @@
                 <th class="pull-right"></th>
                     @foreach($organisations as $organisation)
                     <tr>
-                        <td>{{$organisation->name}}</td>
+                        <td>
+                            {{$organisation->name}}
+                            <ul class="list-group">
+                                @foreach($organisation->tasks as $task)
+                                   <li class="list-group-item">
+                                    <a href="/organisations/{{$organisation->id}}/tasks/{{$task->id}}">{{ $task->name }} </a>
+                                    </li> 
+                                @endforeach
+                                
+                            </ul>
+                        </td>
                         <td>
                             <a href="/organisations/{{$organisation->id}}/tasks/new" class="btn btn-primary pull-right">
                                 Cadastrar tarefa

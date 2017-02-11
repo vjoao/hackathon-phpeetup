@@ -6,13 +6,13 @@
         @include('layouts.partials.alerts')
 
         <div class="page-header">
-            <h3>Sign Up</h3>
+            <h3>Cadastrar</h3>
         </div>
 
          <form role="form" method="POST" action="{{ route('auth.register') }}" class="form-horizontal" _lpchecked="1">
             {!! csrf_field() !!}
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <label for="name" class="col-sm-2 control-label">Name</label>
+                <label for="name" class="col-sm-2 control-label">Nome</label>
                 <div class="col-sm-8">
                     <input type="text" name="name" id="name" autofocus="" class="form-control">
                     @if ($errors->has('name'))
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <label for="password" class="col-sm-2 control-label">Password</label>
+                <label for="password" class="col-sm-2 control-label">Senha</label>
                 <div class="col-sm-8">
                     <input type="password" name="password" id="password" class="form-control">
                     @if ($errors->has('password'))
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <label for="conf_password" class="col-sm-2 control-label">Confirm Password</label>
+                <label for="conf_password" class="col-sm-2 control-label">Confirmar Senha</label>
                 <div class="col-sm-8">
                     <input type="password" class="form-control" name="password_confirmation">
                     @if ($errors->has('password_confirmation'))
@@ -51,7 +51,7 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-8">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-user-plus"></i> Signup</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-user-plus"></i> Cadastrar</button>
                 </div>
             </div>
         </form>

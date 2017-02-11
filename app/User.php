@@ -46,7 +46,7 @@ class User extends Authenticatable
 
     public function tasks()
     {
-        return $this->hasMany(Task::class);
+        return $this->belongsToMany(Task::class)->withPivot('comment');
     }
 
     public function organisations()

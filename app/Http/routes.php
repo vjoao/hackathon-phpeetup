@@ -49,6 +49,11 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
+    Route::get('/organisations/{organisation}/tasks/{task}', [
+        'as' => 'viewTask', 'uses' => 'OrganisationController@viewTask',
+        'middleware' => ['auth']
+    ]);
+
     Route::post('/organisations/{organisation}/tasks', [
         'as' => 'postTask', 'uses' => 'OrganisationController@postTask',
         'middleware' => ['auth']

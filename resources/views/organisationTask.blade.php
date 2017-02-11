@@ -24,24 +24,35 @@
             <h5>{{$task->description}}</h5>
         </div>
 
+        <table class="table">
+            <tr>
+                <th>
+                    Voluntário
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Comentário
+                </th>
+            </tr>
+            
+            @foreach($users as $user)
+                <tr>
+                    <td>
+                        <img src="{{$user->avatar}}" alt="" class="avatar">
+                        {{$user->fullname}}
+                    </td>
+                    <td>
+                        {{$user->email}}
+                    </td>
+                    <td>
+                        {{$user->pivot->comment}}
+                    </td>
+                </tr>
+            @endforeach
 
-         <form role="form" method="POST" action="/tasks/{{$task->id}}/users" class="form-horizontal" _lpchecked="1">
-            {!! csrf_field() !!}
+        </table>
 
-            <div class="form-group{{ $errors->has('comment') ? ' has-error' : '' }}">
-                <label for="comment" class="col-sm-2 control-label">Como pode ajudar?</label>
-                <div class="col-sm-8">
-                    <textarea name="comment" id="comment" rows="7" class="form-control"></textarea>
-                    @if ($errors->has('comment'))
-                        <span class="help-block">{{ $errors->first('comment') }}</span>
-                    @endif
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-8">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope"></i> Ajudar!</button>
-                </div>
-            </div>
-        </form>
     </div>
 @stop
